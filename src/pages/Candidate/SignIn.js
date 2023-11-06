@@ -83,7 +83,7 @@ export default function SignIn() {
           localStorage.setItem('user', JSON.stringify(response.data.user));
           localStorage.setItem('token', response.data.encryptedToken);
           
-          navigate("/CandidateDashboard");
+          navigate("/CandidateDetails");
 
           // setValues({...values , email : "", password : "", message : response.data.Message , success : true})
         } else {

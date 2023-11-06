@@ -7,7 +7,7 @@ import Signin from './pages/user/SignIn'
 import ForgotPassword from './pages/Candidate/ForgotPassword'
 import CandidateNavigation from './Components/layouts/candidateNavigation'
 import CandidateHome from './pages/candidateDashboard/index'
-import CandidateDetails from './pages/candidateDashboard/candidateDetails'
+import CandidateDetails from './pages/candidateDashboard/CanddiateDetails'
 
 
 
@@ -16,16 +16,10 @@ import CandidateDetails from './pages/candidateDashboard/candidateDetails'
 const App = () => {
     return (
       <BrowserRouter>
-      {/* <CandidateNavigation /> */}
 
         <Routes>
-      
-
-          <Route path="/"  element={<CandidateNavigation />}>
-
            <Route path="/CandidateDashboard" element={<CandidateHome/>} />
-           <Route path="/candidateDetails" element={<CandidateDetails/>} />
-          </Route>
+           <Route path="/candidateDetails/:_id" element={<CandidateDetails/>} />
 
           <Route path="/" element={<Home/>} />
           <Route path="/signin" element={<SignIn/>} />
